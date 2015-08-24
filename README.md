@@ -1,2 +1,3 @@
 # qbb2015-Homework
-Assignments for ebb 2015
+Assignments for qbb 2015
+Day 1
