@@ -3,7 +3,7 @@ filename = "/Users/cmdb/qbb2015/genomes/mappedreads.sam"
 
 f = open (filename) #opens file
 
-dictionary ={}
+dictionary ={'2L':0, '2R':0, '3L':0, '3R':0, '4':0, 'X':4}
 
 
 for data in f:
@@ -13,18 +13,14 @@ for data in f:
     else:    
         fields = data.split()
         gene_name =fields[2]
-        if "2L" or "2R" or "3L" or "3R" or "4" or "X" in gene_name:
-            if gene_name not in dictionary:
-                dictionary[gene_name]=1
-            else:
-                 dictionary[gene_name]+=1 
+        if(str(fields[2]) in dictionary):
+            dictionary[str(fields[2])] +=1
+print dictionary
           
-for key, value in dictionary.items():
-    print key, value              
+#for key, value in dictionary.items():
+#    print key, value              
 
-            
-       
-            
+
     
     
    
