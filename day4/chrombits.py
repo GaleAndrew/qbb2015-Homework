@@ -25,6 +25,7 @@ class ChromosomeLocationBitArrays( object ):
             chrom = fields[0]
             start = int( fields[1] )
             end = int( fields[2] )
+            print self.arrays[chrom]
             self.arrays[ chrom ][ start : end ] = 1
         
     def intersect( self, other ):
